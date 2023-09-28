@@ -1,0 +1,36 @@
+{
+  "name": "@hamedstack/msal-node",
+  "version": "1.0.0",
+  "source": "src/index.ts",
+  "main": "dist/commonjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/commonjs/index.d.ts",
+  "typings": "dist/commonjs/index.d.ts",
+  "engines": {
+    "node": ">=18",
+    "npm": ">=8"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build": "rimraf dist --glob && tsc && tsc --build tsconfig.commonjs.json",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@azure/msal-node": "^2.1.0",
+    "@azure/msal-common": "^14.0.3",
+    "@hamedstack/msal-core": "^1.0.0"
+  },
+  "devDependencies": {
+    "rimraf": "5.0.5",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.3",
+    "typescript": "~5.2.2"
+  }
+}
