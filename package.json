@@ -1,13 +1,14 @@
 {
   "name": "@hamedstack/msal",
-  "private": true,
+  "private": false,
   "scripts": {
     "clean": "rimraf **/node_modules --glob",
     "purge": "rimraf **/package-lock.json --glob && rimraf **/node_modules --glob",
     "lint": "npm run lint --workspaces --if-present",
     "lint:fix": "npm run lint-fix --workspaces --if-present",
     "build": "npm run build --workspaces --if-present",    
-    "aio": "npm run purge && npm install && npm run lint:fix && npm run build"
+    "aio": "npm run purge && npm install && npm run lint:fix && npm run build",
+    "release": "npm run release --workspaces --if-present"
   },
   "engines": {
     "node": ">=18",

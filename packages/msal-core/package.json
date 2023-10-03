@@ -16,7 +16,8 @@
   "scripts": {
     "build": "rimraf dist --glob && tsc && tsc --build tsconfig.commonjs.json",
     "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
+    "lint-fix": "eslint . --fix",
+    "release": "npm publish --access public"
   },
   "devDependencies": {
     "rimraf": "5.0.5",
